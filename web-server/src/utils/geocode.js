@@ -1,6 +1,6 @@
 const request = require('request')
 
-const apiKey = 'Enter your API Key'
+const apiKey = 'pk.eyJ1IjoiZGhydXZhcm9yYTkxIiwiYSI6ImNrZXU1d3llYTBta3QzM3A3dHRyYzBvemUifQ.lXgbSID3Uff9zwWvpGQ9Kg'
 
 const geocode = (address, callback) => {
 
