@@ -169,6 +169,3 @@ MongoClient.connect(connectionURL, { useNewURLParser: true }, (error, client) =>
   // })
 
 })
-
-
-
