@@ -5,7 +5,6 @@
 // const ObjectId = mongodb.ObjectId
 
 const { MongoClient, ObjectId } = require('mongodb')
-
 const connectionURL = 'mongodb://127.0.0.1:27017'
 const databaseName = 'task-manager'
 
@@ -67,7 +66,7 @@ MongoClient.connect(connectionURL, { useNewURLParser: true }, (error, client) =>
   //   console.log(user)
   // })
 
-   //  To read a query uing id , _id: "612517eb4975b4f9a797733d" will not work as it is an ObjectId
+  //  To read a query uing id , _id: "612517eb4975b4f9a797733d" will not work as it is an ObjectId
   // db.collection('users').findOne({ _id: ObjectId("612517eb4975b4f9a797733d") }, (error, user) => {
   //   if (error) {
   //     return console.log('Unable to fetch user!')

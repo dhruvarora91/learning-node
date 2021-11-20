@@ -5,7 +5,7 @@ const User = mongoose.model('User', {
   name: {
     type: String,
     required: true,
-    trim: true
+    trim: true,
   },
   age: {
     type: Number,
@@ -23,10 +23,10 @@ const User = mongoose.model('User', {
     lowercase: true,
     validate(value) {
       if (!validator.isEmail(value)) {
-        throw new Error('Email is invalid')
+        throw new Error('Email is Invalid')
       }
     }
-  }, 
+  },
   password: {
     type: String,
     required: true,
@@ -35,7 +35,7 @@ const User = mongoose.model('User', {
     validate(value) {
       if (value.toLowerCase().includes('password')) {
         throw new Error('Password cannot contain the string \'Password\'')
-      }
+      } 
     }
   }
 })
