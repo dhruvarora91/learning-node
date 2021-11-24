@@ -80,7 +80,16 @@ router.patch('/users/:id', async (req, res) => {
     try {
       // new: true , returns the new user as opposed to old one find during update
       // runValidators: true , validates the new body
-      const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true }) 
+      // const user = await User.findByIdAndUpdate(req.params.id, req.body, { new: true, runValidators: true }) 
+
+      const user = await User.findById(req.params.id)
+
+      _updates.forEach((update) => {
+        user[update] = req.body[update]
+      })
+      
+      await user.save()
+
       if (!user) {
         // no user exists with this id
         res.status(404).send()
